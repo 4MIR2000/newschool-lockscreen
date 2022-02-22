@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="60dp"
+    android:paddingRight="60dp"
+    android:paddingTop="60dp"
+    android:background="@color/newSchoolTabletBlue"
+    tools:context="de.newschool.newschool_lockscreen.Lockscreen"
+
+    >
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:textSize="100sp"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_tv"
+        android:layout_alignStart="@+id/textClock"
+        android:layout_below="@+id/textClock"
+        android:textSize="40sp"
+        android:text="2016-03-16"
+        android:paddingLeft="15dp"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_tv"
+        android:text="Amir Taghizadegan"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@+id/klasse_tv"
+
+
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/klasse_tv"
+        android:text="9b"
+        android:textSize="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="40dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timetable_lockscreen"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        ></LinearLayout>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/lock"
+        android:visibility="gone"
+        android:background="@drawable/lock"
+        android:layout_centerInParent="true"
+
+        />
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit"
+        android:id="@+id/timetable_lockscreen_gridView"
+        android:columnWidth="70dp"
+        android:verticalSpacing="40dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:visibility="gone"
+        ></GridView>
+
+
+
+
+
+
+    <com.romainpiel.shimmer.ShimmerTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" > Entsperren"
+        android:textSize="40sp"
+        android:textColor="@color/Gray"
+        android:id="@+id/slideToUnlock"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="85dp"
+
+        />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>
